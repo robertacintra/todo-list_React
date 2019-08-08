@@ -40,31 +40,34 @@ function App() {
   }
 
   //edit the task
-  const handleEdit = e => {
-    setEdit(true);
+  // const handleEdit = e => {
+  //   setEdit(true);
+  // }
 
-    setTodo 
-  }
+  // handleChange(e) {
+    
+  // }
+
   return (
     <div className="todo-list">
       <h1 className="head">To-Do List</h1>
+      <form className="todo-form" onSubmit={handleSubmit}>
+        <input type="text" id="todoValue" onChange={handleInput}/>
+        <button type="submit">ADD</button>
+      </form>
       <div className="todos">
         {
           todos && todos.map((todo, i) => (
             <div className="todo-block" key={todo.value} id={i}>
               <button className={todo.done ? 'done' : 'not-done'} onClick={handleDone}>{todo.value}</button>
               
-              <button className="edit-todo" onClick={handleEdit}>edit</button>   
+              {/* <button className="edit-todo" onClick={handleChange}>edit</button>    */}
 
               <button className="delete-todo" onClick={handleDelete}>x</button>              
             </div>
           ))
         }
       </div>
-      <form className="todo-form" onSubmit={handleSubmit}>
-        <input type="text" id="todoValue" onChange={handleInput}/>
-        <button type="submit">ADD</button>
-      </form>
     </div>
   )
 }
