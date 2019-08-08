@@ -59,6 +59,8 @@
   border: 1px solid #332d36;
   background: #adc7c8;
   margin: 1rem 0;
+  padding: 10px;
+  width: 100%;
   button {
     background: transparent;
     border: none;
@@ -96,4 +98,21 @@
 
 .todo-block:nth-child(even) {
   background: #e7e2de;
+}
+
+.todo-block__to-edit {
+  display: flex;
+  width: 100%;
+}
+.todo-block__to-save {
+  display: none;
+}
+
+.todo-block.edit .todo-block__to-edit{ 
+  display: none;
+}
+
+.todo-block.edit .todo-block__to-save {
+  display: flex;
+  width: 100%;
 }
