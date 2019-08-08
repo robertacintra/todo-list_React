@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-
 .todo-list {
   max-width: 450px;
   margin: 0 auto;
@@ -45,6 +43,9 @@
     padding: 0.5rem 0;
     background: #f1e5b7;
     border: none;
+    &:hover {
+      color: #f7d756;
+    }
   }
 }
 
@@ -78,9 +79,10 @@
 }
 
 .delete-todo {
+  color : #fff;
   &:hover {
     background: #d6b6c1	;
-    color: #fff;
+    color: #3f2730;
   }
 }
 
