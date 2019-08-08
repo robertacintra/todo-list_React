@@ -5,7 +5,7 @@ function App() {
   const [todoValue, setTodoValue] = useState('');
   const [todos, setTodo] = useState([])
 
-  const handleChange = e => {
+  const handleInput = e => {
     setTodoValue(e.target.value);
   }
 
@@ -55,7 +55,7 @@ function App() {
         }
       </div>
       <form className="todo-form" onSubmit={handleSubmit}>
-        <input type="text" id="todoValue" onChange={handleChange}/>
+        <input type="text" id="todoValue" onChange={handleInput}/>
         <button type="submit">ADD</button>
       </form>
     </div>
