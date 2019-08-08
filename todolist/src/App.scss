@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400,400i,700');
+
+.todo-list {
+  max-width: 450px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  button {
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+  }
+  input {
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+  }
+}
+
+.head {
+  color: #160e3b; 
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.todo-form {
+  margin: 0 auto;
+  display: flex;
+  flex-grow: 1;
+  #todoValue {
+    display: block;
+    width: 100%;
+    border : 2px solid #30e188;
+    font-size: 1.1rem;
+    color: #332d36;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    width: 150px;
+    padding: 0.5rem 0;
+    background: #30e188;
+    border: none;
+  }
+}
+
+.todos {
+  margin: 1.5rem 0; 
+}
+
+.todo-block {
+  border-radius: 3px;
+  display: flex;
+  border: 2px solid #332d36;
+  background: #c7c6c6;
+  margin: 1rem 0;
+  button {
+    background: transparent;
+    border: none;
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    &:focus {
+      outline: none;
+    }
+  }
+  button:nth-child(1) {
+    flex-grow: 5;
+    color : #fff;
+  }
+  button:nth-child(2) {
+    flex-grow: 1
+  }
+}
+
+.delete-todo {
+  &:hover {
+    background: #fa392c	;
+    color: #fff;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.todo-block:nth-child(even) {
+  background: #838383;
+}
