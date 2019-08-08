@@ -47,9 +47,9 @@ function App() {
   const handleChange = (e) => {
     e.preventDefault();
     const { id } = e.target.parentElement.parentElement;
-    const novoValor = document.getElementById(`edit-${e.target.parentElement.parentElement.id}`).value.trim();
+    const newValue = document.getElementById(`edit-${e.target.parentElement.parentElement.id}`).value.trim();
     todos[id].edit = false
-    todos[id].value = novoValor === '' ? todos[id].value : novoValor;
+    todos[id].value = newValue === '' ? todos[id].value : newValue;
     setTodo([...todos])
   }
 
